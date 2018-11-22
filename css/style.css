@@ -1,0 +1,269 @@
+:root {
+  --info-height: 22px;
+}
+
+* {
+  cursor: url("../img/mwagac.png"), auto;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+hr {
+  width: 100%;
+}
+
+ul {
+  list-style-type: hebrew;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "VT323", monospace;
+  font-variant-ligatures: no-common-ligatures;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+img {
+  margin-bottom: 16px;
+}
+
+body {
+  margin: 0;
+  user-select: none;
+  background: #000;
+  background-image: url("../img/bg.gif");
+}
+
+nav ul,
+nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  font-family: "Arial Black", Gadget, sans-serif;
+  margin: 0 auto;
+  margin-top: 16px;
+  background-image: url(../img/static.gif);
+  color: #ffd707;
+  text-transform: uppercase;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-shadow: 3px 2px 0 #ffad00a1;
+  border: 4px ridge #5d5d5d;
+  box-sizing: border-box;
+}
+
+h1 a {
+  font-family: Impact, Charcoal, sans-serif;
+  color: #ffffff8c;
+  text-shadow: 10px 0 0 #ff0000a1;
+}
+
+main {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  padding: 16px 16px calc(var(--info-height) + 16px) 16px;
+  box-sizing: border-box;
+}
+
+[view] {
+  display: none;
+  width: 100%;
+}
+
+[view].active {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+[view="memes"] img {
+  width: 66.6%;
+}
+
+[view="news"] {
+  align-items: flex-start !important;
+}
+
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+  min-height: calc(100vh - var(--info-height));
+  background: #000;
+  background-image: url("../img/bg_rock.jpg");
+}
+
+.header {
+  position: relative;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.diesel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Faster One", cursive;
+  font-weight: 700;
+  font-size: 52px;
+  color: #fff;
+  text-shadow: 4px 4px 0 #000;
+  text-transform: uppercase;
+}
+
+.diesel > span {
+  margin: 0 16px;
+  animation: drugged-out 0.021s linear infinite;
+}
+
+.fire {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: url("../img/fire.gif");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.fire.blue {
+  background-size: 80% 80%;
+  filter: hue-rotate(160deg) contrast(150%) saturate(200%);
+}
+
+.fire.red {
+  background-size: 105% 100%;
+  filter: hue-rotate(-30deg) contrast(150%) saturate(200%);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav > li {
+  width: 100%;
+}
+
+.nav .link {
+  font-family: "Heebo", sans-serif;
+  font-size: 21px;
+  letter-spacing: 4px;
+  color: #666;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.1s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-shadow: 2px 2px 0px #000;
+  box-sizing: border-box;
+  height: 32px;
+  border: 16px ridge #5d5d5d;
+}
+
+.link:hover {
+  border: 16px ridge #4decff;
+}
+
+.link.active,
+.link:hover {
+  color: #fff;
+}
+
+.link.active {
+  border: 16px ridge #f00;
+}
+
+.invite {
+  font-size: 44px;
+  animation: overdose 1s linear infinite;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  color: #f00;
+  border-top: 2px solid #f00;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  font-weight: 700;
+  box-sizing: border-box;
+  height: var(--info-height);
+  padding: 0 4px;
+}
+
+.version {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+}
+
+.welcome > img {
+  margin: 0;
+  margin-right: 16px;
+}
+
+.date {
+  color: #ffd707;
+  text-shadow: 2px 2px 0 #ffad00a1;
+  font-family: Impact, Charcoal, sans-serif;
+  align-self: flex-end;
+  padding: 8px;
+}
+
+@keyframes drugged-out {
+  0% {
+    transform: translate(0, 0px) rotate(1deg);
+  }
+  50% {
+    transform: translate(16px, 0px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0px) rotate(1deg);
+  }
+}
+
+@keyframes overdose {
+  25% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+}
