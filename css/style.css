@@ -3,7 +3,7 @@
 }
 
 * {
-	cursor: url('../img/mwagac.png'), auto;
+	cursor: url("../img/mwagac.png"), auto;
 }
 
 html,
@@ -19,7 +19,7 @@ ul {
 	list-style-type: hebrew;
 	width: 100%;
 	box-sizing: border-box;
-	font-family: 'VT323', monospace;
+	font-family: "VT323", monospace;
 	font-variant-ligatures: no-common-ligatures;
 	font-size: 24px;
 	letter-spacing: 2px;
@@ -63,7 +63,7 @@ h1 {
 	box-sizing: border-box;
 	padding: 128px 64px;
 	font-size: 64px;
-	font-family: 'VT323', monospace;
+	font-family: "VT323", monospace;
 	letter-spacing: 2px;
 	line-height: 42px;
 }
@@ -94,11 +94,15 @@ main {
 	align-items: center;
 }
 
-[view='memes'] img {
+[view="memes"] {
+	flex-direction: column-reverse !important;
+}
+
+[view="memes"] img {
 	width: 66.6%;
 }
 
-[view='news'] {
+[view="news"] {
 	align-items: flex-start !important;
 }
 
@@ -107,7 +111,7 @@ main {
 	margin: 0 auto;
 	min-height: calc(100vh - var(--info-height));
 	background: #000;
-	background-image: url('../img/bricks.gif');
+	background-image: url("../img/bricks.gif");
 	background-size: 50% 200%;
 	text-shadow: 3px 0 #000;
 }
@@ -130,15 +134,12 @@ main {
 	flex-flow: column;
 	align-items: center;
 	justify-content: center;
-	font-family: 'Faster One', cursive;
+	font-family: "Faster One", cursive;
 	font-weight: 700;
 	font-size: 52px;
 	color: #fff;
 	text-shadow: 4px 4px 0 #000;
 	text-transform: uppercase;
-}
-
-.diesel > span {
 }
 
 .fire {
@@ -147,7 +148,7 @@ main {
 	height: 100%;
 	left: 0;
 	top: 0;
-	background-image: url('../img/fire.gif');
+	background-image: url("../img/fire.gif");
 	background-repeat: no-repeat;
 	background-position: center bottom;
 }
@@ -197,7 +198,7 @@ main {
 
 .link:hover {
 	border: 0;
-	background: url('../img/beam.gif');
+	background: url("../img/beam.gif");
 	background-size: auto 32px;
 	outline: 4px ridge #ccc;
 }
@@ -223,7 +224,7 @@ main {
 	background: #000;
 	color: #f00;
 	border-top: 2px solid #f00;
-	font-family: 'Courier New', Courier, monospace;
+	font-family: "Courier New", Courier, monospace;
 	font-size: 13px;
 	width: 100%;
 	position: fixed;

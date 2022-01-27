@@ -249,7 +249,18 @@
 		}
 
 		const lol = (target, n) => {
-			for (let i = n; i > 0; i--) {
+			for (let i = 1; i <= n; i++) {
+				//your just jelly at how sophisticated the next block is
+				if (i == 136) {
+					const video = document.createElement('video');
+					video.src = `vid/puffdar_clown.mp4`;
+					video.autoplay = false;
+					video.controls = true;
+					document
+						.querySelector(`[view="${target}"]`)
+						.appendChild(video);
+					continue;
+				}
 				const image = document.createElement("img");
 				image.src = `img/${target}/${i}.jpg`;
 				document
@@ -261,7 +272,7 @@
 		window.onload = () => {
 			const cheers = new Cheers();
 			//HACK FOR ANTILAG INTERP FRAC CALC OFFSET DELTA
-			lol("memes", 135);
+			lol("memes", 136);
 			lol("reviews", 22);
 		};
 	</script>
