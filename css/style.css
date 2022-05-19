@@ -34,9 +34,10 @@ img {
 body {
 	margin: 0;
 	user-select: none;
-	background: #f00;
+	background: #00ff7d;
 	background-image: url(../img/skull.gif);
-	background-size: 256px;
+	background-size: 128px;
+	filter: hue-rotate(613deg) contrast(1.5) blur(1px);
 }
 
 nav ul,
@@ -114,6 +115,8 @@ main {
 	background-image: url("../img/bricks.gif");
 	background-size: 50% 200%;
 	text-shadow: 3px 0 #000;
+	border: 32px dashed #0ff;
+	outline: 32px dotted #0f0;
 }
 
 .header {
@@ -262,6 +265,27 @@ main {
 	align-self: flex-end;
 	padding: 8px;
 	font-size: 24px;
+}
+
+.pulse {
+	transform: scale(1);
+	animation: pulse 0.15s linear alternate infinite;
+}
+
+@keyframes pulse {
+	0% {
+		filter: hue-rotate(0);
+		transform: scale(1) skewX(20deg);
+	}
+
+	50% {
+		transform: scale(1.5) skewX(0);
+	}
+
+	100% {
+		transform: scale(2) skewX(-20deg);
+		filter: hue-rotate(1080deg) contrast(0.25);
+	}
 }
 
 @keyframes drugged-out {
