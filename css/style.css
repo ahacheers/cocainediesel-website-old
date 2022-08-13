@@ -37,7 +37,6 @@ body {
 	background: #00ff7d;
 	background-image: url(../img/skull.gif);
 	background-size: 128px;
-	filter: hue-rotate(613deg) contrast(1.5) blur(1px);
 }
 
 nav ul,
